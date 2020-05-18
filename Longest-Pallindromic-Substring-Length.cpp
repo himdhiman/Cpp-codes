@@ -10,6 +10,9 @@ int Pallindrome(string s, int start, int end, int dp[][100]){
         return dp[start][end];
     }
     if(s[start] == s[end]){
+        if(start + 1 == end){
+            return 2;
+        }
         return 2 + Pallindrome(s, start + 1, end - 1, dp);
     }
 
